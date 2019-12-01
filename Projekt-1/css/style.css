@@ -23,9 +23,8 @@ header {
 }
 div.conteiner {
 	max-width: 1352px;
-
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 	margin: 0 auto;
 }
 .logo {
@@ -106,7 +105,6 @@ h2 {
 	margin-bottom: 50px;
 	margin-top: 50px;
 } 
-
 .box-info {
 	width: 163px;
 	height: 168px;
@@ -119,7 +117,6 @@ h2 {
 	font-weight: bolder;
 }
 .box-info p {
-
 	color: #A5A5A5;
 	font-size: 17px;
 	line-height: 20px;
@@ -135,9 +132,7 @@ h2 {
 	background-color: #F7F7F7;
 	padding: 75px 0 75px 0;
 }
-
 article.one-article {
-	
 	width: 1124px;
     height: 370px;
 	background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -166,41 +161,35 @@ hr.red {
 hr.green {
 	border-color: #55DFB4;	
 }
-
+.box-text-2 {
+	height: 370px;
+	background: #FFFFFF;
+	padding: 35px;
+	border-radius: 5px;
+	border: 1px solid #E8E9ED;
+	width: 623px;
+}
+h3 {
+	font-size: 36px;
+	margin-bottom: 29px;
+	width: 330px;
+	line-height: 42px;
+}
 .box-photo-ico {
-	background: #55DFB4 0% 0% no-repeat padding-box;
+	background:  url("../images/Trumpet.png") #55DFB4;
 	width: 440px;
 	height: 370px;
-	border: 1px solid #E8E9ED;
     border-radius: 5px;
+	background-size: cover;
+	background-position: center;
 }
-
-.box-photo-ico img{
-	width: 296px;
-}
-
-.two-article {
-	width: 623px;
-    height: 370px;
-	background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #E8E9ED;
-    border-radius: 5px;
-	line-height: 22px;
-	margin: 30px auto;
-	display: flex;
-	justify-content: space-between;
-    align-items: center;
-	padding: 35px;
-}
-
 /* section price list */
 section.price-list {
 	height: 650px;
 	margin-bottom: 50px;
-
 }
 div.price-box {
-	background: #FFFFFF 0% 0% no-repeat padding-box;
+	background: #FFFFFF;
     border: 1px solid #FB3B64;
     border-radius: 18px; 
 	width: 372px;
@@ -209,13 +198,17 @@ div.price-box {
 	position: relative;
 }
 button {
-	background: #EB476E 0% 0% no-repeat padding-box;
+	background: #EB476E;
 	border-radius: 23px;
 	padding: 10px 57px 10px 57px;
 	border: none;
 	color: #fff;
 	font: Bold 13px Open Sans;
 }
+/*button {
+	background: #07ACE6;	
+}*/
+
 h4 {
     text-align: center;
     color: #13253B;
@@ -246,8 +239,13 @@ section.price-box ul li {
 }
 
 .price-list ul li{
-	list-style-image: url("../images/Checkmark-1.svg"); 
+	list-style-image: url("../images/Ckechmark-1.svg"); 
 }
+
+.price-list ul li:last-of-type {
+	list-style-image: url("../images/Close.svg"); 
+}
+
 section.contact {
 	height: 450px;
 }
@@ -265,10 +263,9 @@ section.contact h2 {
 	font-family: 'Open Sans', sans-serif;
 }
 /* stylowanie formularza */
-
 form {
     font-size: 12px;
-    width: 440px;
+    width: 440px; 
     font-family: 'Open Sans', sans-serif;
 	color: #707070;
 	line-height: 17px;
@@ -315,8 +312,12 @@ form .checkbox {
 }
 /* footer styling */
 footer {
+	max-width: 1352px;
+    display: flex;
+    justify-content: space-between;
+	margin: 0 auto;
 	padding: 24px;
-	background: #F7F7F7 0% 0% no-repeat padding-box;
+	background: #F7F7F7;
 	height: 89px;
 	font-family: Open Sans;
 	font-size: 11px;
