@@ -19,7 +19,9 @@ header {
 	background: #fff;
 	box-shadow: 0px 3px 6px #00000029;
 	width: 100%;
-	
+	position: fixed;
+    top: 0px;
+	z-index: 999;
 }
 div.conteiner {
 	max-width: 1352px;
@@ -197,18 +199,36 @@ div.price-box {
 	text-align: center;
 	position: relative;
 }
-button {
+
+div.price-box:nth-child(2) {
+    border: 1px solid #07ACE6;
+	box-shadow: 5px 10px 27px #07ACE629;
+	width: 405px;
+    height: 500px;
+	margin-top: -20px;
+}
+div.price-box:nth-child(3) {
+    border:1px solid #55DFB4;
+}
+button.btn-price {
 	background: #EB476E;
 	border-radius: 23px;
 	padding: 10px 57px 10px 57px;
 	border: none;
 	color: #fff;
 	font: Bold 13px Open Sans;
+	position: absolute;
+	top: 435px;
+    left: 109px;
 }
-/*button {
-	background: #07ACE6;	
-}*/
-
+div.price-box:nth-of-type(2) .btn-price{
+	background: #07ACE6;
+	top: 479px;
+    left: 124px;
+}
+div.price-box:nth-of-type(3) .btn-price{
+	background: #55DFB4;
+}
 h4 {
     text-align: center;
     color: #13253B;
@@ -216,11 +236,20 @@ h4 {
     font-weight: bold;
     margin-top: 30px;
 }
-h5 {
+div.price-box h5 {
 	text-align: center;
 	font-size: 46px;
 	margin: 14px;
+	color: #FB3B64;
 }
+
+div.price-box:nth-of-type(2) h5 {
+	color: #07ACE6;
+}
+div.price-box:nth-of-type(3) h5 {
+	color: #55DFB4;
+}
+
 .price-box p {
 	font-size: 12px;
 	font-weight: bold;
