@@ -26,13 +26,13 @@ header {
 	z-index: 999;
 	
 }
-div.conteiner {
+div.container {
 	max-width: 1352px;
 	display: flex;
 	justify-content: space-between;
 	margin: 0 auto;
 }
-.conteiner-content {
+main{
 	max-width: 1352px;
 	margin: 0 auto;
 	
