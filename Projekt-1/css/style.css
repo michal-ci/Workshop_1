@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* CSS Document */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -11,10 +11,12 @@
 /*font-family: 'Raleway', sans-serif;
 font-family: 'Open Sans', sans-serif;*/
 /* stylowanie header */
+
 body {
 	font-family: 'Raleway', sans-serif;
 }
 header {
+	padding: 0 10px 0 10px;
 	height: 70px;
 	background: #fff;
 	box-shadow: 0px 3px 6px #00000029;
@@ -22,13 +24,20 @@ header {
 	position: fixed;
     top: 0px;
 	z-index: 999;
+	
 }
 div.conteiner {
 	max-width: 1352px;
-    display: flex;
-    justify-content: space-evenly;
+	display: flex;
+	justify-content: space-between;
 	margin: 0 auto;
 }
+.conteiner-content {
+	max-width: 1352px;
+	margin: 0 auto;
+	
+}
+
 .logo {
 	
 	font-size: 32px;
@@ -57,7 +66,7 @@ div.conteiner {
 .page-nav a:hover {
     color: #213131;
     border-bottom: 3px solid #08A6E4;
-   padding-bottom: 27px;
+    padding-bottom: 27px;
 	font-weight: bold;
 }
 
@@ -66,7 +75,6 @@ div.conteiner {
     border-bottom: 3px solid #08A6E4;
     padding: 15px;
 }
-
 /* stylowanie sekcji baner */
 
 section.baner {
@@ -93,11 +101,11 @@ section h1{
 background-color: #02488A;
 }
 
-/* section info-icons ( stylowanie sekcji i ikonami ) */ 
+/* section info-icons */ 
 
 section.info-icons {
-	text-align: center;
-	height: 450px;
+	 display: flex;
+	
 }
 
 h2 {
@@ -108,11 +116,13 @@ h2 {
 	margin-top: 50px;
 } 
 .box-info {
-	width: 163px;
-	height: 168px;
+	flex-direction: column;
+	flex-grow: 1;
+	text-align: center;
 }
 
 .box-info span {
+	display: block;
     letter-spacing: 4px;
 	font-size: 20px;
 	line-height:  24px;
@@ -128,22 +138,17 @@ h2 {
 	margin-bottom: 17px;	
 }
 
-/* section main  - ( sekcja z artykułami) */
+/* section article */
 
-.article-content {
-	background-color: #F7F7F7;
-	padding: 75px 0 75px 0;
-}
+
 article.one-article {
-	width: 1124px;
-    height: 370px;
+
 	background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #E8E9ED;
     border-radius: 5px;
 	line-height: 22px;
 	margin: 30px auto;
 	display: flex;
-	justify-content: space-between;
     align-items: center;
 	padding: 35px;
 		
@@ -163,34 +168,51 @@ hr.red {
 hr.green {
 	border-color: #55DFB4;	
 }
-.box-text-2 {
-	height: 370px;
-	background: #FFFFFF;
-	padding: 35px;
-	border-radius: 5px;
-	border: 1px solid #E8E9ED;
-	width: 623px;
+
+.article-columns {
+	display: flex;
+	
 }
+.box-text-2 {
+	width: 70%;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E8E9ED;
+	margin-right: 20px;
+	border-radius: 5px;
+	justify-content: center;
+	padding: 35px;
+}
+.box-photo-ico {
+	width: 30%;
+	background: #55DFB4;
+	border-radius: 5px;
+}
+
+.ico-tuba {
+	background: url("../images/Trumpet.png") no-repeat center/contain;
+	width: spx;
+	height: 350px;
+}
+
 h3 {
 	font-size: 36px;
 	margin-bottom: 29px;
 	width: 330px;
 	line-height: 42px;
 }
-.box-photo-ico {
-	background:  url("../images/Trumpet.png") #55DFB4;
-	width: 440px;
-	height: 370px;
-    border-radius: 5px;
-	background-size: cover;
-	background-position: center;
-}
+
 /* section price list */
+
+
 section.price-list {
-	height: 650px;
+	
 	margin-bottom: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 div.price-box {
+	padding: 30px 80px;
 	background: #FFFFFF;
     border: 1px solid #FB3B64;
     border-radius: 18px; 
@@ -198,14 +220,16 @@ div.price-box {
     height: 461px;
 	text-align: center;
 	position: relative;
+	margin: 0 10px 0 10px;
 }
 
 div.price-box:nth-child(2) {
     border: 1px solid #07ACE6;
 	box-shadow: 5px 10px 27px #07ACE629;
 	width: 405px;
-    height: 500px;
-	margin-top: -20px;
+	height: 500px;
+ 
+	margin-top: -10px;
 }
 div.price-box:nth-child(3) {
     border:1px solid #55DFB4;
@@ -275,8 +299,15 @@ section.price-box ul li {
 	list-style-image: url("../images/Close.svg"); 
 }
 
+
+/* stylowanie kontakt */
+
 section.contact {
-	height: 450px;
+	display: flex;
+	justify-content: space-around;
+	padding-bottom: 50px;
+	align-content: center;
+
 }
 section.contact h2 {
     text-align: left;
@@ -291,7 +322,6 @@ section.contact h2 {
 	color: #A5A5A5;
 	font-family: 'Open Sans', sans-serif;
 }
-/* stylowanie formularza */
 form {
     font-size: 12px;
     width: 440px; 
@@ -339,12 +369,12 @@ input[type="checkbox"] {
 form .checkbox {
 	margin: 25px 0 25px 0;
 }
+
+
 /* footer styling */
+
 footer {
-	max-width: 1352px;
-    display: flex;
-    justify-content: space-between;
-	margin: 0 auto;
+
 	padding: 24px;
 	background: #F7F7F7;
 	height: 89px;
@@ -355,4 +385,90 @@ footer {
 footer .logo{
 	font-size: 26px;
 	line-height: 31px;
+}
+
+
+@media (max-width: 960px) {
+	
+
+	
+	section.baner {
+	  margin-top: 250px;
+	}
+	.box-text {
+	  display: flex;
+		flex-direction: column;
+	}
+	
+	.page-nav {
+	    visibility: hidden;
+	}
+	
+	hr {
+	    visibility: hidden;
+	}
+	.article-columns {
+		flex-direction: column;
+		
+	}
+	.box-text-2 {
+		width: 100%;
+	}
+	.box-photo-ico {
+		width: 100%;
+	}
+	
+	section.info-icons {
+    flex-direction: column;
+    }
+	
+	sections.article-content,
+	article.one-article {
+		flex-direction: column;
+	}
+	
+	sections.article-content,
+	article.one-article:first-child {
+		flex-direction: column-reverse;
+
+	}
+	
+	button.btn-price {
+    left: 94px;
+}
+	
+	.price-list {
+		flex-direction: column;
+		
+		
+	}
+	section.contact {
+		flex-direction: column;
+		align-items: center;
+		
+	}
+	
+	img[alt="laptop"] {
+		margin-bottom: 50px;
+		
+		
+	}
+	
+	div.price-box {
+	
+	width: 350px;
+	margin-bottom: 40px;
+
+}
+	div.price-box:nth-child(2) {
+	width: 405px;
+	
+
+}
+	
+	button.btn-price:hover {
+ 
+	
+	}
+
 }
